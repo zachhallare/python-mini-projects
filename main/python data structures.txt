@@ -1,0 +1,66 @@
+1. List ([])
+    Ordered: Keeps items in the order you insert them.
+    Mutable: You can add, remove, or change elements.
+    Allows duplicates: [1, 2, 2, 3] is valid.
+    Indexable: Access by index → my_list[0].
+    Use case: General-purpose collection where order matters.
+
+    my_list = [10, 20, 30, 20]  
+    my_list.append(40)  # [10, 20, 30, 20, 40]
+
+
+
+2. Tuple (())
+    Ordered: Like lists, keeps order.
+    Immutable: Once created, you cannot change it.
+    Allows duplicates.
+    Indexable like lists.
+    Use case: Fixed collections, data that shouldn’t change (e.g., coordinates).
+
+    my_tuple = (1, 2, 3, 2)  
+    # my_tuple[0] = 10 ❌ (error, cannot modify)
+
+
+
+3. Set ({})
+    Unordered: Does not preserve insertion order.
+    Mutable: Can add/remove elements, but…
+    No duplicates: {1, 2, 2, 3} == {1, 2, 3}
+    Not indexable: You can’t access by index.
+    Use case: Removing duplicates, membership testing.
+
+    my_set = {1, 2, 2, 3}  # {1, 2, 3}
+    my_set.add(4)          # {1, 2, 3, 4}
+
+
+
+4. Dictionary ({key: value})
+    Ordered: Preserves insertion order of keys.
+    Mutable: Can add/remove/change key-value pairs.
+    Unique keys: Keys must be unique, values can repeat.
+    Key-value mapping: Access via keys, not index.
+    Use case: Store data with meaningful labels.
+
+    my_dict = {"name": "Zach", "age": 21}
+    print(my_dict["name"])  # Zach
+    my_dict["age"] = 22     # update value
+
+
+
+5. Array (array.array)
+    From Python’s array module (not as common as lists).
+    Ordered & mutable like lists, but…
+    Stores only one data type (e.g., all integers, all floats).
+    More memory-efficient & faster than lists for large numeric data.
+    Use case: Large amounts of numerical data, performance-critical tasks.
+
+    import array
+    my_array = array.array('i', [1, 2, 3, 4])  # 'i' = int
+    my_array.append(5)  # [1, 2, 3, 4, 5]
+
+
+Most used: Lists and Dictionaries (can do everything)
+When to use the rest: 
+    Tuples → if you want data that shouldn’t change (e.g., fixed coordinates, immutable config, function returns).
+    Sets → if you care about uniqueness or need fast membership checks (if x in my_set:).
+    Arrays / NumPy → if you’re working with lots of numbers and care about performance (e.g., data science, ML, image processing).
