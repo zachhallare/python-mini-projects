@@ -108,3 +108,75 @@
 
 
 
+# # functions
+# def hello(firstName, lastName):
+#     print("Hello " + firstName + " " + lastName + "!")
+
+# hello("Zach", "Hallare")
+# hello(lastName="Ngo", firstName="Meggie")
+
+
+# # *args (method/function overloading for python)
+# # the parameters can have different data types
+# def add(*args):     # it doesnt have to be named args, but put the *
+#     sum = 0
+#     for i in args:
+#         sum += i
+#     return sum
+
+# print(add(1, 2, 3, 4, 5, 6))
+
+
+# # **kwargs (same as args but it puts it in a dictionary, you use keywords)
+# def hello(**kwargs):     # it doesnt have to be named kwargs, but put the **
+#     # print("Hello " + kwargs["first"] + " " + kwargs["middle"][0] + ". " + kwargs["last"])
+#     print("Hello", end=" ")
+#     for key, value in kwargs.items():
+#         if key == "middle":
+#             print(value[0], end=". ")
+#         elif key == "last":
+#             print(value, end="! ")
+#         else:
+#             print(value, end=" ")
+
+# hello(title="Mr.", first="Zach Benedict", middle="Isleta", last="Hallare")
+
+
+
+# # string formatting
+# print("The {animal} jumped over the {item}".format((animal="cow", item="moon"))    
+
+# # Aligning
+# name = "Zach"
+# print("Hello, {:<10}. Nice to meet you".format(name))
+# print("Hello, {:^10}. Nice to meet you".format(name))
+# print("Hello, {:>10}. Nice to meet you".format(name))
+
+# pi = 3.14159
+# print("The number pi is {:.3f}".format(pi))
+
+# number = 1000
+# print("The number is {:,}".format(number))
+# print("The number is {:b}".format(number))
+# print("The number is {:o}".format(number))
+# print("The number is {:X}".format(number))
+
+
+
+# random module
+import random
+
+x = random.randint(1, 6)
+print(x)
+
+y = random.random()
+print(y)
+
+myList = ["rock", "paper", "scissors"]
+z = random.choice(myList)
+print(z)
+
+cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K", "A"]
+random.shuffle(cards)
+print(cards)
+
