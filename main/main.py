@@ -163,20 +163,41 @@
 
 
 
-# random module
-import random
+# # random module
+# import random
 
-x = random.randint(1, 6)
-print(x)
+# x = random.randint(1, 6)
+# print(x)
 
-y = random.random()
-print(y)
+# y = random.random()
+# print(y)
 
-myList = ["rock", "paper", "scissors"]
-z = random.choice(myList)
-print(z)
+# myList = ["rock", "paper", "scissors"]
+# z = random.choice(myList)
+# print(z)
 
-cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K", "A"]
-random.shuffle(cards)
-print(cards)
+# cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, "J", "Q", "K", "A"]
+# random.shuffle(cards)
+# print(cards)
 
+
+
+
+# exception handling
+try:
+    numerator = int(input("Enter a number to divide: "))
+    denominator = int(input("Enter a number to divide by: "))
+    result = numerator / denominator
+except ZeroDivisionError as e:
+    print(e)
+    print("You can't divide by 0.")
+except ValueError as e:
+    print(e)
+    print("Enter only numbers!")
+except Exception as e:
+    print(e)
+    print("Something went wrong lil bro")
+else:
+    print(result)
+finally:
+    print("This will always run")
